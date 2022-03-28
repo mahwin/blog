@@ -59,7 +59,7 @@ export default class PostsController {
 
     return post;
   }
-  async read({ params, response }: HttpContextContract) {
+  async read({ params }: HttpContextContract) {
     const { slug } = params;
     const post = await Post.query()
       .preload("user")
